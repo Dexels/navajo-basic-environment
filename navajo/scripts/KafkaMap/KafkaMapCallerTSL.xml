@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- XTSL test caller script for the KafkaMap. -->
+
+<tsl>
+
+    <message name="KafkaResponseTSL">
+
+        <map object="com.dexels.navajo.adapter.KafkaMap">
+            
+            <field name="propertyName">
+                <expression value="'/My/Property/TSL'"/>
+            </field>
+            
+            <field name="propertyType">
+                <expression value="'string'"/>
+            </field>
+            
+            <field name="property">
+                <expression value="'myValueTSL'"/>
+            </field>
+    
+            <field name="append">
+                <expression value="'/TSL/'"/>
+            </field>
+    
+            <field name="doSend">
+                <expression value="'my/service/name/TSL'"/>
+            </field>
+        
+        </map>
+
+    </message>
+
+</tsl>
