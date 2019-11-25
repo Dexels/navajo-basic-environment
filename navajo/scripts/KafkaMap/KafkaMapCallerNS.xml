@@ -6,7 +6,7 @@
 
     <message name="KafkaResponseNS">
     
-        <map.kafkamap>
+        <map.kafkamap topic="'my-topic-kafkamap-ns'">
             <kafkamap.createproperty name="'/My/Property/NS'" type="'string'" value="'myValueNS'" />
             <kafkamap.callwebservice name="'my/service/name/NS'" append="'/NS'" />
         </map.kafkamap>

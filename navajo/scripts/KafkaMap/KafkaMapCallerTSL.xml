@@ -8,6 +8,10 @@
 
         <map object="com.dexels.navajo.adapter.KafkaMap">
             
+            <field name="topic">
+                <expression value="'my-topic-kafkamap-tsl'"/>
+            </field>
+            
             <field name="propertyName">
                 <expression value="'/My/Property/TSL'"/>
             </field>
