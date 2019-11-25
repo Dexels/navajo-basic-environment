@@ -16,7 +16,7 @@
             </field>
     
             <field name="doSend">
-                <expression value="'NavajoMapCallee'"/>
+                <expression value="'NavajoMap/NavajoMapCallee'"/>
             </field>
     
             <message name="IndirectResponse">
@@ -30,7 +30,7 @@
             </field>
     
             <field name="doSend">
-                <expression value="'NavajoMapCallee'"/>
+                <expression value="'NavajoMap/NavajoMapCallee'"/>
             </field>
     
             <message name="IndirectResponse">
