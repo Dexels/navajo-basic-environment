@@ -4,13 +4,14 @@
 
 <navascript>
 
-    <message name="KafkaResponseNS">
-    
-        <map.kafkamap topic="'my-topic-kafkamap-ns'">
-            <kafkamap.createproperty name="'/My/Property/NS'" type="'string'" value="'myValueNS'" />
-            <kafkamap.callwebservice name="'my/service/name/NS'" append="'/NS'" />
+    <message name="kafkamap">    
+        <map.kafkamap>
+            <kafkamap.post topic="'my-topic-ns'" key="'my-key-ns'" />
+
+            <property name="response" type="string" direction="out">
+                <expression value="$response" />
+            </property>
         </map.kafkamap>
-        
     </message>
 
 </navascript>

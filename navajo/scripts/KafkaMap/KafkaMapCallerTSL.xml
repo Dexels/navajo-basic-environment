@@ -4,36 +4,20 @@
 
 <tsl>
 
-    <message name="KafkaResponseTSL">
+    <message name="kafkamap">
+        <map object="com.dexels.navajo.adapter.KafkaMap">            
+            <field name="key">
+                <expression value="'my-key-tsl'"/>
+            </field>
+            
+            <field name="doPost">
+                <expression value="'my-topic-tsl'"/>
+            </field>
 
-        <map object="com.dexels.navajo.adapter.KafkaMap">
-            
-            <field name="topic">
-                <expression value="'my-topic-kafkamap-tsl'"/>
-            </field>
-            
-            <field name="propertyName">
-                <expression value="'/My/Property/TSL'"/>
-            </field>
-            
-            <field name="propertyType">
-                <expression value="'string'"/>
-            </field>
-            
-            <field name="property">
-                <expression value="'myValueTSL'"/>
-            </field>
-    
-            <field name="append">
-                <expression value="'/TSL/'"/>
-            </field>
-    
-            <field name="doSend">
-                <expression value="'my/service/name/TSL'"/>
-            </field>
-        
+            <property name="response" type="string" direction="out">
+                <expression value="$response" />
+            </property>
         </map>
-
     </message>
 
 </tsl>
