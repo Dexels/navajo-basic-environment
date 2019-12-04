@@ -5,13 +5,29 @@
 <navascript>
 
     <message name="kafkamap">    
-        <map.kafkamap>
-            <kafkamap.post topic="'my-topic-ns'" key="'my-key-ns'" />
+        <message name="wholeDocument">
+            <property name="wholeDocument" type="boolean" value="true" direction="out" />
 
-            <property name="response" type="string" direction="out">
-                <expression value="$response" />
-            </property>
-        </map.kafkamap>
+            <map.kafkamap>
+                <kafkamap.post key="'my-key-ns'" topic="'my-topic-ns'" />
+    
+                <property name="response" type="string" direction="out">
+                    <expression value="$response" />
+                </property>
+            </map.kafkamap>
+        </message>
+        
+        <message name="rootMessage">
+            <property name="wholeDocument" type="boolean" value="false" direction="out" />
+            
+            <map.kafkamap>
+                <kafkamap.post wholeDocument="false" key="'my-key-ns'" topic="'my-topic-ns'" />
+    
+                <property name="response" type="string" direction="out">
+                    <expression value="$response" />
+                </property>
+            </map.kafkamap>
+        </message>
     </message>
 
 </navascript>
