@@ -1,4 +1,0 @@
-<message name="KafkaMapIn">
-    <property name="Value_1" value="42" />
-    <property name="Value_2" value="43" />
-</message>

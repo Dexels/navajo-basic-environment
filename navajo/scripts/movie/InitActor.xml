@@ -2,6 +2,7 @@
     <message name="Actor">
         <property name="Id" direction="in" type="integer"/>
     </message>
+
     <methods>
         <method name="movie/Actor"/>
         <method name="movie/DeleteActor"/>

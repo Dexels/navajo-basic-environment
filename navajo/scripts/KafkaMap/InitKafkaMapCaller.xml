@@ -1,0 +1,11 @@
+<navascript>
+    <message name="KafkaMapIn">
+        <property name="Value_1" value="42" />
+        <property name="Value_2" value="43" />
+    </message>
+
+    <methods>
+        <method name="KafkaMap/KafkaMapCallerNS" />
+        <method name="KafkaMap/KafkaMapCallerTSL" />
+    </methods>
+</navascript>

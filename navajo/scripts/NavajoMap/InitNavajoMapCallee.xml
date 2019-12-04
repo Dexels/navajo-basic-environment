@@ -1,0 +1,9 @@
+<navascript>
+    <message name="Request">
+        <property name="ValueIn" value="42" />
+    </message>
+
+    <methods>
+        <method name="NavajoMap/NavajoMapCallee" />
+    </methods>
+</navascript>

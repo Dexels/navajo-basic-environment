@@ -1,0 +1,10 @@
+<navascript>
+    <message name="IndirectRequest">
+        <property name="IndirectValueIn" value="42" />
+    </message>
+
+    <methods>
+        <method name="NavajoMap/NavajoMapCallerNS" />
+        <method name="NavajoMap/NavajoMapCallerTSL" />
+    </methods>
+</navascript>
