@@ -28,4 +28,8 @@
 
     </message>
 
+    <methods>
+        <method name="NavajoMap/InitNavajoMapCaller"/>
+    </methods>
+
 </navascript>
