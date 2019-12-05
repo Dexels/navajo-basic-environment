@@ -1,7 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Simple init script to create a default KafkaMapCaller input message. -->
+
 <navascript>
     <message name="KafkaMapIn">
-        <property name="Value_1" value="42" />
-        <property name="Value_2" value="43" />
+        <property name="Value_1" type="integer" value="42" direction="in" />
+        <property name="Value_2" type="integer" value="43" direction="in" />
     </message>
 
     <methods>

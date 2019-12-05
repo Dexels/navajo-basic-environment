@@ -30,4 +30,8 @@
         </message>
     </message>
 
+    <methods>
+        <method name="KafkaMap/InitKafkaMapCaller"/>
+    </methods>
+
 </navascript>
