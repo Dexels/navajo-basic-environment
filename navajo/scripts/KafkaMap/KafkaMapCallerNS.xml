@@ -6,12 +6,12 @@
 
     <message name="kafkamap">    
         <map.kafkamap sendThrough="true">
-            <kafkamap.createproperty name="'/added/prop'" type="'integer'" value="42" />
+            <kafkamap.createproperty name="'/added/prop'" type="'string'" value="'ns-based'" />
             <kafkamap.post key="'my-key-ns'" />
         </map.kafkamap>
 
         <map.kafkamap sendThrough="false">
-            <kafkamap.createproperty name="'/added/prop'" type="'integer'" value="43" />
+            <kafkamap.createproperty name="'/added/prop'" type="'string'" value="'ns-based'" />
             <kafkamap.post key="'my-key-ns'" />
         </map.kafkamap>
 
