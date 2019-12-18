@@ -5,7 +5,7 @@
 <tsl>
 
     <message name="kafkamap">
-        <map object="com.dexels.navajo.enterprise.adapter.KafkaMap">            
+        <map object="com.dexels.navajo.enterprise.kafkamap.adapter.KafkaMap">            
             <field name="sendThrough">
                 <expression value="true"/>
             </field>
@@ -27,7 +27,7 @@
             </field>
         </map>
 
-        <map object="com.dexels.navajo.enterprise.adapter.KafkaMap">            
+        <map object="com.dexels.navajo.enterprise.kafkamap.adapter.KafkaMap">            
             <field name="sendThrough">
                 <expression value="false"/>
             </field>
