@@ -23,7 +23,7 @@
             </field>
             
             <field name="doPost">
-                <expression value="'my-key-tsl'"/>
+                <expression value="'KafkaMap/KafkaMapCallee'"/>
             </field>
         </map>
 
@@ -45,7 +45,7 @@
             </field>
             
             <field name="doPost">
-                <expression value="'my-key-tsl'"/>
+                <expression value="'KafkaMap/KafkaMapCallee'"/>
             </field>
         </map>
 

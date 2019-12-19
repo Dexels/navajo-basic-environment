@@ -7,12 +7,12 @@
     <message name="kafkamap">    
         <map.kafkamap sendThrough="true">
             <kafkamap.createproperty name="'/added/prop'" type="'string'" value="'ns-based'" />
-            <kafkamap.post key="'my-key-ns'" />
+            <kafkamap.callwebservice name="'KafkaMap/KafkaMapCallee'" />
         </map.kafkamap>
 
         <map.kafkamap sendThrough="false">
             <kafkamap.createproperty name="'/added/prop'" type="'string'" value="'ns-based'" />
-            <kafkamap.post key="'my-key-ns'" />
+            <kafkamap.callwebservice name="'KafkaMap/KafkaMapCallee'" />
         </map.kafkamap>
 
         <property name="response" type="string" value="OK" direction="out" />
