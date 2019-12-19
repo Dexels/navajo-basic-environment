@@ -29,7 +29,37 @@
 
         <map object="com.dexels.navajo.enterprise.kafkamap.adapter.KafkaMap">            
             <field name="sendThrough">
-                <expression value="false"/>
+                <expression value="true"/>
+            </field>
+
+            <field name="resource">
+                <expression value="'myself'"/>
+            </field>
+
+            <field name="propertyName">
+                <expression value="'/added/prop'"/>
+            </field>
+
+            <field name="propertyType">
+                <expression value="'string'"/>
+            </field>
+
+            <field name="property">
+                <expression value="'tsl-based'"/>
+            </field>
+            
+            <field name="doPost">
+                <expression value="'KafkaMap/KafkaMapCallee'"/>
+            </field>
+        </map>
+
+        <map object="com.dexels.navajo.enterprise.kafkamap.adapter.KafkaMap">            
+            <field name="sendThrough">
+                <expression value="true"/>
+            </field>
+
+            <field name="server">
+                <expression value="'http://localhost:9090/navajo'"/>
             </field>
 
             <field name="propertyName">

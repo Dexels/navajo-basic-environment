@@ -10,7 +10,12 @@
             <kafkamap.callwebservice name="'KafkaMap/KafkaMapCallee'" />
         </map.kafkamap>
 
-        <map.kafkamap sendThrough="false">
+        <map.kafkamap sendThrough="true" resource="'myself'">
+            <kafkamap.createproperty name="'/added/prop'" type="'string'" value="'ns-based'" />
+            <kafkamap.callwebservice name="'KafkaMap/KafkaMapCallee'" />
+        </map.kafkamap>
+
+        <map.kafkamap sendThrough="true" server="'http://localhost:9090/navajo'">
             <kafkamap.createproperty name="'/added/prop'" type="'string'" value="'ns-based'" />
             <kafkamap.callwebservice name="'KafkaMap/KafkaMapCallee'" />
         </map.kafkamap>

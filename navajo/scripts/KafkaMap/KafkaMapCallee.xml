@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- Callee function for the KafkaMap example, returning empty message. -->
+<!-- Callee function for the KafkaMap example, returning the none message. -->
 
 <tsl>
 
-    <message name="none" />
+    <message name="None">
+        <property name="prop" type="string" direction="out">
+            <expression value="[/added/prop]"/>
+        </property>
+    </message>
 
 </tsl>
