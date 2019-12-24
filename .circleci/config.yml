@@ -3,9 +3,6 @@ orbs:
   gcp-gke: circleci/gcp-gke@0.2.0
 jobs:
   build:
-    branches:
-      ignore:
-        - Issue-515-Introduce-KafkaAdapter
     machine:
       image: circleci/classic:edge
     steps:
@@ -58,6 +55,10 @@ workflows:
   workflow:
     jobs:
       - build
+          filters:
+            branches:
+              ignore:
+                - Issue-515-Introduce-KafkaAdapter
       - test:
           requires:
             - build
