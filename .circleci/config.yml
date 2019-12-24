@@ -54,7 +54,7 @@ workflows:
   version: 2
   workflow:
     jobs:
-      - build
+      - build:
           filters:
             branches:
               ignore:
@@ -65,3 +65,4 @@ workflows:
       - deploy:
           requires:
             - test
+
