@@ -55,6 +55,11 @@ workflows:
   workflow:
     jobs:
       - build
+          filters:
+            branches:
+              ignore:
+                - Issue-515-Introduce-KafkaAdapter
+                - Issue-518-sendThrough-field-NavajoMap
       - test:
           requires:
             - build
