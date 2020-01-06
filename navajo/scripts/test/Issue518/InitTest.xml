@@ -6,14 +6,17 @@
 
     <message name="SimpleMessage1">
         <property name="Name1" value="Value1" type="string" direction="in" />
+        <property name="Scope" value="None" type="string" direction="in" />
     </message>
 
-    <message name="SimpleMessage2">
+    <message name="SimpleMessage2" scope="global">
         <property name="Name2" value="Value2" type="string" direction="in" />
+        <property name="Scope" value="Global" type="string" direction="in" />
     </message>
 
-    <message name="SimpleMessage3">
+    <message name="SimpleMessage3" scope="local">
         <property name="Name3" value="Value3" type="string" direction="in" />
+        <property name="Scope" value="Local" type="string" direction="in" />
     </message>
 
     <methods>
