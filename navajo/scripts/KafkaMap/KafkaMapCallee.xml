@@ -2,7 +2,9 @@
 
 <!-- Callee function for the KafkaMap example, returning the none message. -->
 
-<tsl>
+<navascript>
+
+    <map.testadapter />
 
     <message name="None">
         <property name="prop" type="string" direction="out">
@@ -10,4 +12,4 @@
         </property>
     </message>
 
-</tsl>
+</navascript>
