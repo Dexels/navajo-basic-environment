@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- XTSL test caller script for the KafkaMap. -->
+<!-- XTSL test caller script for the NonBlockingMap. -->
 
 <tsl>
 
-    <message name="kafkamap">
-        <map object="com.dexels.navajo.enterprise.kafkamap.adapter.KafkaMap">            
+    <message name="NonBlockingMapOut">
+        <map object="com.dexels.navajo.enterprise.nonblockingmap.adapter.NonBlockingMap">            
             <field name="sendThrough">
                 <expression value="true"/>
             </field>
@@ -23,11 +23,11 @@
             </field>
             
             <field name="doPost">
-                <expression value="'KafkaMap/KafkaMapCallee'"/>
+                <expression value="'test/Issue515/NonBlockingMapCallee'"/>
             </field>
         </map>
 
-        <map object="com.dexels.navajo.enterprise.kafkamap.adapter.KafkaMap">            
+        <map object="com.dexels.navajo.enterprise.nonblockingmap.adapter.NonBlockingMap">            
             <field name="sendThrough">
                 <expression value="true"/>
             </field>
@@ -49,11 +49,11 @@
             </field>
             
             <field name="doPost">
-                <expression value="'KafkaMap/KafkaMapCallee'"/>
+                <expression value="'test/Issue515/NonBlockingMapCallee'"/>
             </field>
         </map>
 
-        <map object="com.dexels.navajo.enterprise.kafkamap.adapter.KafkaMap">            
+        <map object="com.dexels.navajo.enterprise.nonblockingmap.adapter.NonBlockingMap">            
             <field name="sendThrough">
                 <expression value="true"/>
             </field>
@@ -75,7 +75,7 @@
             </field>
             
             <field name="doPost">
-                <expression value="'KafkaMap/KafkaMapCallee'"/>
+                <expression value="'test/Issue515/NonBlockingMapCallee'"/>
             </field>
         </map>
 
@@ -83,7 +83,7 @@
     </message>
 
     <methods>
-        <method name="KafkaMap/InitKafkaMapCaller"/>
+        <method name="test/Issue515/InitNonBlockingMapCaller"/>
     </methods>
 
 </tsl>

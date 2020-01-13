@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Navascript test caller script for the NonBlockingMap. -->
+
+<navascript>
+
+    <message name="NonBlockingMapOut">    
+        <map.nonblocking sendThrough="true">
+            <nonblocking.createproperty name="'/added/prop'" type="'string'" value="'ns-based'" />
+            <nonblocking.callwebservice name="'test/Issue515/NonBlockingMapCallee'" />
+        </map.nonblocking>
+
+        <map.nonblocking sendThrough="true" resource="'myself'">
+            <nonblocking.createproperty name="'/added/prop'" type="'string'" value="'ns-based'" />
+            <nonblocking.callwebservice name="'test/Issue515/NonBlockingMapCallee'" />
+        </map.nonblocking>
+
+        <map.nonblocking sendThrough="true" server="'http://localhost:9090/navajo'">
+            <nonblocking.createproperty name="'/added/prop'" type="'string'" value="'ns-based'" />
+            <nonblocking.callwebservice name="'test/Issue515/NonBlockingMapCallee'" />
+        </map.nonblocking>
+
+        <property name="response" type="string" value="OK" direction="out" />
+    </message>
+
+    <methods>
+        <method name="test/Issue515/InitNonBlockingMapCaller"/>
+    </methods>
+
+</navascript>

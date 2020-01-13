@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- Callee function for the KafkaMap example, returning the none message. -->
+<!-- Callee function for the NonBlockingMap example, returning the none message. -->
 
 <navascript>
 

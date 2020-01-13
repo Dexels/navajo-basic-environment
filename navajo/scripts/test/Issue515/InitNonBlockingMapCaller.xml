@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- Simple init script to create a default KafkaMapCaller input message. -->
+<!-- Init script to create a default NonBlockingMapCaller input message. -->
 
 <navascript>
-    <message name="KafkaMapIn">
+
+    <message name="NonBlockingMapIn">
         <property name="Value_1" type="integer" value="42" direction="in" />
         <property name="Value_2" type="integer" value="43" direction="in" />
     </message>
 
     <methods>
-        <method name="KafkaMap/KafkaMapCallerNS" />
-        <method name="KafkaMap/KafkaMapCallerTSL" />
+        <method name="test/Issue515/NonBlockingMapCallerNS" />
+        <method name="test/Issue515/NonBlockingMapCallerTSL" />
     </methods>
+
 </navascript>
