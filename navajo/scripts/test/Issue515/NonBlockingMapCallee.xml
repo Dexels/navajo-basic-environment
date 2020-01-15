@@ -6,9 +6,9 @@
 
     <map.testadapter />
 
-    <message name="None">
-        <property name="prop" type="string" direction="out">
-            <expression value="[/added/prop]"/>
+    <message name="info">
+        <property name="text" type="string" direction="out">
+            <expression value="[/info/text]"/>
         </property>
     </message>
 
