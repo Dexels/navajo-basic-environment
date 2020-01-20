@@ -57,12 +57,12 @@ workflows:
       - build:
           filters:
             branches:
-              ignore:
-                - Issue-515-Introduce-KafkaAdapter
-                - Issue-518-sendThrough-field-NavajoMap
+              only:
+                - master
       - test:
           requires:
             - build
       - deploy:
           requires:
             - test
+
