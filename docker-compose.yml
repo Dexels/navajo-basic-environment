@@ -7,6 +7,7 @@ services:
       - "5432:5432"
     environment:
       POSTGRES_PASSWORD: mysecretpassword
+
   navajo:
     build:
       context: .
@@ -42,3 +43,4 @@ services:
     environment:
       ADVERTISED_HOST: localhost
       ADVERTISED_PORT: 9092
+
