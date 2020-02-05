@@ -18,7 +18,7 @@ function usage() {
     echo "Usage: $script [-h] [-d] [-k] [-n]"
     echo "  -h  this info"
     echo "  -d  dry run"
-    echo "  -k  with the kafka container"
+    echo "  -k  with the kafka containers"
     echo "  -n  without the navajo container"
     
     if [ -n "$1" ] ; then
@@ -44,7 +44,7 @@ function parse_options() {
     done
         
     if [ -n "$with_kafka" ] ; then
-        services="$services kafka"
+        services="$services zookeeper kafka0 kafka1 kafka2"
     fi
     
     if [ -n "$with_navajo" ] ; then
