@@ -34,16 +34,6 @@ jobs:
           # Upload test results for display in Test Summary: https://circleci.com/docs/2.0/collect-test-data/
           path: surefire-reports
 
-  deploy:
-    description: Deploy application to Google Kubernetes Engine
-    machine: true
-    steps:
-      - run: |
-          export NAVAJOEXAMPLEBUILDNR=$(curl -s "https://circleci.com/api/v1.1/project/github/Dexels/navajo-basic-environment?circle-token=${CIRCLE_TOKEN}&offset=0&filter=successful" | jq '[.[]| select(.workflows.job_name == "build")][0].build_num')
-          echo "Navajo Build nr: ${NAVAJOEXAMPLEBUILDNR}"
-          echo "export NAVAJOEXAMPLEBUILDNR=$NAVAJOEXAMPLEBUILDNR" >> $BASH_ENV
-          echo "Image: ${IMAGE}:${MINORTAG}.${NAVAJOEXAMPLEBUILDNR}"
-
 workflows:
   version: 2
   workflow:
@@ -56,7 +46,4 @@ workflows:
       - test:
           requires:
             - build
-      - deploy:
-          requires:
-            - test
 
