@@ -6,7 +6,7 @@
     <stringAttribute key="bootstrap" value=""/>
     <stringAttribute key="checked" value="[NONE]"/>
     <booleanAttribute key="clearConfig" value="true"/>
-    <stringAttribute key="configLocation" value="${workspace_loc}/.metadata/.plugins/org.eclipse.pde.core/NavajoExample"/>
+    <stringAttribute key="configLocation" value="${workspace_loc}/.metadata/.plugins/org.eclipse.pde.core/Basic Environment"/>
     <booleanAttribute key="de.toem.impulse.launchactivateLaunch" value="false"/>
     <booleanAttribute key="de.toem.impulse.launchactivateTermination" value="false"/>
     <intAttribute key="de.toem.impulse.launchdelayLaunch" value="0"/>
@@ -33,7 +33,7 @@
         <mapEntry key="FILE_REPOSITORY_DEPLOYMENT" value="develop"/>
         <mapEntry key="FILE_REPOSITORY_FILEINSTALL" value="config"/>
         <mapEntry key="FILE_REPOSITORY_MONITORED" value="scripts,config,resources"/>
-        <mapEntry key="FILE_REPOSITORY_PATH" value="${project_loc:navajo.example}/navajo"/>
+        <mapEntry key="FILE_REPOSITORY_PATH" value="${project_loc:navajo-basic-environment}/navajo"/>
         <mapEntry key="FILE_REPOSITORY_TYPE" value="multitenant"/>
         <mapEntry key="HAZELCAST_SIMPLE" value="true"/>
         <mapEntry key="INSTANCENAME" value="instance-1"/>
@@ -54,7 +54,7 @@
     <stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="-os ${target.os}&#10;-ws ${target.ws}&#10;-arch ${target.arch}&#10;-nl en_US&#10;-console"/>
     <stringAttribute key="org.eclipse.jdt.launching.SOURCE_PATH_PROVIDER" value="org.eclipse.pde.ui.workbenchClasspathProvider"/>
     <stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-Dcom.sun.management.jmxremote&#10;-Declipse.ignoreApp=true&#10;-Djava.awt.headless=true&#10;-Dnavajo.inject.mbeanserver&#10;-Dorg.ops4j.pax.logging.DefaultServiceLog.level=WARN&#10;-Dorg.osgi.framework.startlevel.beginning=1&#10;-Dorg.osgi.framework.system.packages.extra=sun.misc&#10;-Dorg.osgi.service.http.port=9090&#10;-Dosgi.noShutdown=true&#10;-Dfile.encoding=UTF-8&#10;-Xmx800M"/>
-    <stringAttribute key="org.eclipse.jdt.launching.WORKING_DIRECTORY" value="${workspace_loc:navajo.example/navajo}"/>
+    <stringAttribute key="org.eclipse.jdt.launching.WORKING_DIRECTORY" value="${workspace_loc:navajo-basic-environment/navajo}"/>
     <stringAttribute key="pde.version" value="3.3"/>
     <setAttribute key="selected_target_bundles">
         <setEntry value="bcpg@default:default"/>
@@ -74,8 +74,7 @@
         <setEntry value="com.dexels.replication.impl@default:default"/>
         <setEntry value="com.dexels.repository.api@default:default"/>
         <setEntry value="com.dexels.repository.file@default:default"/>
-        <setEntry value="com.dexels.resourcebundle*2.0.2.201610130917@default:default"/>
-        <setEntry value="com.dexels.resourcebundle*2.0.3@default:default"/>
+        <setEntry value="com.dexels.resourcebundle@default:default"/>
         <setEntry value="com.dexels.server.mgmt.api@default:default"/>
         <setEntry value="com.dexels.server.mgmt.impl@default:default"/>
         <setEntry value="com.fasterxml.aalto-xml@default:default"/>
@@ -199,6 +198,7 @@
         <setEntry value="com.dexels.navajo.article@default:default"/>
         <setEntry value="com.dexels.navajo.authentication.api@default:default"/>
         <setEntry value="com.dexels.navajo.birt.push@default:default"/>
+        <setEntry value="com.dexels.navajo.client.async.jetty@default:default"/>
         <setEntry value="com.dexels.navajo.client.async@default:default"/>
         <setEntry value="com.dexels.navajo.client.impl.javanet@default:default"/>
         <setEntry value="com.dexels.navajo.client.nql@default:default"/>
