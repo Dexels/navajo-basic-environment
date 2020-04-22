@@ -1,17 +1,18 @@
-Small demo-setup for a container based Navajo instance.
+## Small demo-setup for a container-based Navajo instance ##
+
 This setup will start three containers:
-
 - An empty mongodb instance
-- A Postgres database with some fake movie data
-- A navajo container pointing to the database
-- The navajo container has a few scripts that access that data
+- A postgres database with some fake movie data
+- A navajo container pointing to the two databases
 
-Using this demo:
+The Navajo container has a few scripts that access the data in the databases.
+
+### Using this demo ###
 
 Clone this repository:
 
 ```
-git clone https://github.com/Dexels/navajo.example.git
+%> git clone https://github.com/Dexels/navajo.example.git
 ```
 
 This will clone a simple navajo project along with some docker configuration files.
@@ -20,14 +21,20 @@ We use docker-compose here, a simple piece of configuration that allows us to st
 Take a look at the docker compose file:
 
 ```
-�version: '2'
+version: '3'
 services:
+  mongodemo:
+    image: mongo:latest
+    ports:
+      - "27017:27017"
+
   postgres:
     image: dexels/dvdrental:1.0.7
     ports:
       - "5432:5432"
     environment:
       POSTGRES_PASSWORD: mysecretpassword
+
   navajo:
     image: dexels/navajo-demo:1
     ports:
@@ -38,14 +45,15 @@ services:
      - FILE_REPOSITORY_DEPLOYMENT=develop
 ```
 
-It defines two containers, one called postgres and one called navajo. The postgres container exposes the standard postgres port at 5432, and navajo
-exposes port 8181.
+It defines three containers, called "mongodemo", "postgres", and "navajo". The mongodemo container exposes the standard
+mongodb port at 27017, the postgres container the standard postgres port at 5432, and navajo container exposes an HTTP
+port at 8181.
 
 ```
 %> docker-compose up
 ```
 
-Will start both containers and after a while both should be up.
+Will start all three containers, and after a while they should all be up.
 
 then open a browse to:
 http://localhost:8181/tester.html
@@ -80,27 +88,33 @@ https://felix.apache.org/documentation/subprojects/apache-felix-web-console.html
 
 (You can check with cluster are running using 'docker-compose ps', or check 'docker ps' for individual containers)
 
+
+### Connecting to the MongoDB database
+
+Open a connection to localhost:27017 using your favorite mongodb access tool (*e.g.*, MongoDB Compass or Robo 3T).
+
+
 ### Connecting to the Postgres database
 
-Open a connection to localhost:5432 using your favorite database access tool (e.g. DbVisualizer)
+Open a connection to localhost:5432 using your favorite database access tool (*e.g.*, DbVisualizer)
 
 Username: postgres 
 
 Password: mysecretpassword
 
-### Editing / rebuilding.
+### Editing / rebuilding
 
 Try editing / adding scripts in navajo/scripts.
 Then rebuild:
 
 ```
-docker-compose build
+%> docker-compose build
 ```
 
 And bring it back up:
 
 ```
-docker-compose up
+%> docker-compose up
 ```
 
 For more about docker / docker-compose, there is very nice documentation available at
