@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Issue-518: NavajoMap tester (caller part) - True sendthrough parameter. -->
+
+<navascript>
+
+    <message name="TrueParameter">
+        <map.navajomap sendThrough="true">
+            <map.callwebservice name="'test/Issue518/TestCallee'" append="'/'" />
+        </map.navajomap>
+    </message>
+
+    <methods>
+        <method name="test/Issue518/InitTest" />
+    </methods>
+
+</navascript>
