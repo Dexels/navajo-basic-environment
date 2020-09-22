@@ -67,6 +67,8 @@
         <setEntry value="com.dexels.oauth.api@default:default"/>
         <setEntry value="com.dexels.oauth.impl@default:default"/>
         <setEntry value="com.dexels.oauth.web@default:default"/>
+        <setEntry value="com.dexels.prometheus.api@default:default"/>
+        <setEntry value="com.dexels.prometheus.impl@default:default"/>
         <setEntry value="com.dexels.pubsub.rx2.api@default:default"/>
         <setEntry value="com.dexels.replication.api@default:default"/>
         <setEntry value="com.dexels.replication.impl.json@default:default"/>
@@ -77,6 +79,7 @@
         <setEntry value="com.dexels.resourcebundle@default:default"/>
         <setEntry value="com.dexels.server.mgmt.api@default:default"/>
         <setEntry value="com.dexels.server.mgmt.impl@default:default"/>
+        <setEntry value="com.diffplug.osgi.extension.sun.misc@default:default"/>
         <setEntry value="com.fasterxml.aalto-xml@default:default"/>
         <setEntry value="com.fasterxml.jackson.core.jackson-annotations@default:default"/>
         <setEntry value="com.fasterxml.jackson.core.jackson-core@default:default"/>
@@ -92,6 +95,8 @@
         <setEntry value="com.oracle.jdbc.driver@default:default"/>
         <setEntry value="com.sun.activation.javax.activation@default:default"/>
         <setEntry value="com.sun.mail.javax.mail@default:default"/>
+        <setEntry value="io.prometheus.simpleclient@default:default"/>
+        <setEntry value="io.prometheus.simpleclient_common@default:default"/>
         <setEntry value="io.reactivex.rxjava2.rxjava@default:default"/>
         <setEntry value="javax.annotation-api@default:default"/>
         <setEntry value="javax.el-api@default:default"/>
@@ -126,7 +131,7 @@
         <setEntry value="org.apache.felix.gogo.shell@default:default"/>
         <setEntry value="org.apache.felix.inventory@default:default"/>
         <setEntry value="org.apache.felix.metatype@default:default"/>
-        <setEntry value="org.apache.felix.scr*2.1.18@1:true"/>
+        <setEntry value="org.apache.felix.scr*2.1.22@1:true"/>
         <setEntry value="org.apache.felix.webconsole.plugins.ds@default:default"/>
         <setEntry value="org.apache.felix.webconsole.plugins.event@default:default"/>
         <setEntry value="org.apache.felix.webconsole@default:default"/>
@@ -189,7 +194,6 @@
         <setEntry value="stax2-api@default:default"/>
     </setAttribute>
     <setAttribute key="selected_workspace_bundles">
-        <setEntry value="com.dexels.config.runtime@default:default"/>
         <setEntry value="com.dexels.navajo.adapters.binarystore@default:default"/>
         <setEntry value="com.dexels.navajo.adapters.resource@default:default"/>
         <setEntry value="com.dexels.navajo.adapters.stream@default:default"/>
@@ -245,6 +249,7 @@
         <setEntry value="com.dexels.navajo.resource.mail@default:default"/>
         <setEntry value="com.dexels.navajo.resource.sftp@default:default"/>
         <setEntry value="com.dexels.navajo.resource@default:default"/>
+        <setEntry value="com.dexels.navajo.runtime.config@default:default"/>
         <setEntry value="com.dexels.navajo.scala.navajoscala@default:default"/>
         <setEntry value="com.dexels.navajo.scala.scriptcompiler@default:default"/>
         <setEntry value="com.dexels.navajo.tester.js@default:default"/>
