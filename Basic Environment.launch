@@ -42,7 +42,7 @@
         <mapEntry key="NO_DBREPLICATION" value="true"/>
         <mapEntry key="NO_DBTRIGGER" value="true"/>
         <mapEntry key="REPLICATION_MESSAGE_FORMAT" value="PROTOBUF"/>
-        <mapEntry key="TENANT_MASTER" value="Tenant1"/>
+        <mapEntry key="TENANT_MASTER" value="wildcard"/>
     </mapAttribute>
     <listAttribute key="org.eclipse.debug.ui.favoriteGroups">
         <listEntry value="org.eclipse.debug.ui.launchGroup.debug"/>
@@ -123,18 +123,18 @@
         <setEntry value="org.apache.commons.logging@default:default"/>
         <setEntry value="org.apache.commons.net@default:default"/>
         <setEntry value="org.apache.commons.pool@default:default"/>
-        <setEntry value="org.apache.felix.configadmin@default:default"/>
-        <setEntry value="org.apache.felix.eventadmin@default:default"/>
-        <setEntry value="org.apache.felix.fileinstall@default:default"/>
-        <setEntry value="org.apache.felix.gogo.command@default:default"/>
-        <setEntry value="org.apache.felix.gogo.runtime@default:default"/>
-        <setEntry value="org.apache.felix.gogo.shell@default:default"/>
-        <setEntry value="org.apache.felix.inventory@default:default"/>
-        <setEntry value="org.apache.felix.metatype@default:default"/>
+        <setEntry value="org.apache.felix.configadmin@1:default"/>
+        <setEntry value="org.apache.felix.eventadmin@1:default"/>
+        <setEntry value="org.apache.felix.fileinstall@1:default"/>
+        <setEntry value="org.apache.felix.gogo.command@1:default"/>
+        <setEntry value="org.apache.felix.gogo.runtime@1:default"/>
+        <setEntry value="org.apache.felix.gogo.shell@1:default"/>
+        <setEntry value="org.apache.felix.inventory@1:default"/>
+        <setEntry value="org.apache.felix.metatype@1:default"/>
         <setEntry value="org.apache.felix.scr*2.1.22@1:true"/>
-        <setEntry value="org.apache.felix.webconsole.plugins.ds@default:default"/>
-        <setEntry value="org.apache.felix.webconsole.plugins.event@default:default"/>
-        <setEntry value="org.apache.felix.webconsole@default:default"/>
+        <setEntry value="org.apache.felix.webconsole.plugins.ds@3:default"/>
+        <setEntry value="org.apache.felix.webconsole.plugins.event@3:default"/>
+        <setEntry value="org.apache.felix.webconsole@3:default"/>
         <setEntry value="org.apache.httpcomponents.httpclient@default:default"/>
         <setEntry value="org.apache.httpcomponents.httpcore@default:default"/>
         <setEntry value="org.apache.pdfbox.fontbox@default:default"/>
@@ -178,8 +178,8 @@
         <setEntry value="org.objectweb.asm.commons@default:default"/>
         <setEntry value="org.objectweb.asm.tree@default:default"/>
         <setEntry value="org.objectweb.asm@default:default"/>
-        <setEntry value="org.ops4j.pax.logging.pax-logging-api@1:default"/>
-        <setEntry value="org.ops4j.pax.logging.pax-logging-service@1:default"/>
+        <setEntry value="org.ops4j.pax.logging.pax-logging-api@2:default"/>
+        <setEntry value="org.ops4j.pax.logging.pax-logging-service@2:default"/>
         <setEntry value="org.ops4j.pax.web.pax-web-api@default:default"/>
         <setEntry value="org.ops4j.pax.web.pax-web-extender-whiteboard@default:default"/>
         <setEntry value="org.ops4j.pax.web.pax-web-jetty@default:default"/>
