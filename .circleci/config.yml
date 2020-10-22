@@ -32,7 +32,7 @@ jobs:
       - run:
           name: Build Docker Compose environment & run tests
           command: |
-            export BASE_VERSION=$(curl -s "https://circleci.com/api/v1.1/project/github/Dexels/navajo-container?circle-token=${CIRCLE_TOKEN}&limit=100&offset=0&filter=successful" | jq '[.[]| select(.workflows.job_name == "package_navajo")][0].build_num')
+            export BASE_VERSION=$(curl -s "https://circleci.com/api/v1.1/project/github/Dexels/navajo-container?circle-token=${CIRCLE_TOKEN}&limit=100&offset=0&filter=successful" | jq '[.[]| select(.workflows.job_name == "build")][0].build_num')
             export MINORVERSION=3.3
             export VERSION=${MINORVERSION}.${BASE_VERSION}
             docker-compose up -d
