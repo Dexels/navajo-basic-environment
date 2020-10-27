@@ -65,8 +65,6 @@
         <setEntry value="com.dexels.immutable.impl@default:default"/>
         <setEntry value="com.dexels.kafka.impl.rx2@default:default"/>
         <setEntry value="com.dexels.oauth.api@default:default"/>
-        <setEntry value="com.dexels.oauth.impl@default:default"/>
-        <setEntry value="com.dexels.oauth.web@default:default"/>
         <setEntry value="com.dexels.prometheus.api@default:default"/>
         <setEntry value="com.dexels.prometheus.impl@default:default"/>
         <setEntry value="com.dexels.pubsub.rx2.api@default:default"/>
@@ -201,7 +199,6 @@
         <setEntry value="com.dexels.navajo.adapters.stream@default:default"/>
         <setEntry value="com.dexels.navajo.adapters@default:default"/>
         <setEntry value="com.dexels.navajo.api@default:default"/>
-        <setEntry value="com.dexels.navajo.article@default:default"/>
         <setEntry value="com.dexels.navajo.authentication.api@default:default"/>
         <setEntry value="com.dexels.navajo.birt.push@default:default"/>
         <setEntry value="com.dexels.navajo.client.async.jetty@default:default"/>
