@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Issue-518: Startup message for tester (GUI) interface. -->
+
+<navascript>
+
+    <message name="SimpleMessage1">
+        <property name="Name1" value="Value1" type="string" direction="in" />
+        <property name="Scope" value="None" type="string" direction="in" />
+    </message>
+
+    <message name="SimpleMessage2" scope="global">
+        <property name="Name2" value="Value2" type="string" direction="in" />
+        <property name="Scope" value="Global" type="string" direction="in" />
+    </message>
+
+    <message name="SimpleMessage3" scope="local">
+        <property name="Name3" value="Value3" type="string" direction="in" />
+        <property name="Scope" value="Local" type="string" direction="in" />
+    </message>
+
+    <methods>
+        <method name="test/Issue518/TestCallerNone" />
+        <method name="test/Issue518/TestCallerFalse" />
+        <method name="test/Issue518/TestCallerTrue" />
+    </methods>
+
+</navascript>

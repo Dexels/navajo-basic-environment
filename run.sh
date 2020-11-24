@@ -8,7 +8,7 @@
 script=$(basename $0)
 
 
-function usage() {
+usage () {
 
     if [ -n "$1" ] ; then
         exec >&2
@@ -18,8 +18,8 @@ function usage() {
     echo "Usage: $script [-h] [-d] [-k] [-n]"
     echo "  -h  this info"
     echo "  -d  dry run"
-    echo "  -k  with the kafka containers"
-    echo "  -n  without the navajo container"
+    echo "  -k  run without the kafka container"
+    echo "  -n  run without the navajo container"
     
     if [ -n "$1" ] ; then
         exit 0
@@ -29,16 +29,16 @@ function usage() {
 }
 
 
-function parse_options() {
+parse_options () {
     
-    with_kafka=""
+    with_kafka="set"
     
     while getopts :hdkn option ; do
         case $option in
             \?)  usage $OPTARG ;;
             h)  usage ;;
             d)  dry_run="set" ;;
-            k)  with_kafka="set" ;;
+            k)  with_kafka="" ;;
             n)  with_navajo="" ;;
         esac
     done
@@ -81,3 +81,4 @@ else
     echo "services: $services"
     docker-compose  up  $build_option  $services
 fi
+
