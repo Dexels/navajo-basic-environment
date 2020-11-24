@@ -5,31 +5,44 @@ jobs:
       image: circleci/classic:edge
     steps:
       - checkout
-      - run: |
-          docker --version
-          docker login -u $DOCKER_USER -p $DOCKER_PASS
-      - run: |
-          pwd
-          ls -l
-          ./build.sh
+
+      - run:
+          name: Log in with docker registries
+          command: |
+            docker --version
+            echo $DOCKERHUB_PASS | docker login --username $DOCKERHUB_USER --password-stdin
+
+      - run:
+          name: Run build.sh
+          command: |
+            pwd
+            ls -l
+            ./build.sh
 
   test:
     machine:
       image: circleci/classic:edge
     steps:
       - checkout
-      - run: |
-          export BASE_VERSION=$(curl -s "https://circleci.com/api/v1.1/project/github/Dexels/navajo-container?circle-token=${CIRCLE_TOKEN}&limit=100&offset=0&filter=successful" | jq '[.[]| select(.workflows.job_name == "package_navajo")][0].build_num')
-          export MINORVERSION=3.3
-          export VERSION=${MINORVERSION}.${BASE_VERSION}
-          docker-compose up -d
-          echo "Compose completed"
-          date
-          sleep 60
-          echo "Sleep completed at:"
-          date
-          mkdir surefire-reports
-          docker run -v $PWD/surefire-reports:/surefire-reports -e URL=http://navajo:8181 --network project_default dexels/navajo.example.test:latest
+      - run:
+          name: Log in with docker registries
+          command: |
+            docker --version
+            echo $DOCKERHUB_PASS | docker login --username $DOCKERHUB_USER --password-stdin
+      - run:
+          name: Build Docker Compose environment & run tests
+          command: |
+            export BASE_VERSION=$(curl -s "https://circleci.com/api/v1.1/project/github/Dexels/navajo-container?circle-token=${CIRCLE_TOKEN}&limit=100&offset=0&filter=successful" | jq '[.[]| select(.workflows.job_name == "build")][0].build_num')
+            export MINORVERSION=3.3
+            export VERSION=${MINORVERSION}.${BASE_VERSION}
+            docker-compose up -d
+            echo "Compose completed"
+            date
+            sleep 60
+            echo "Sleep completed at:"
+            date
+            mkdir surefire-reports
+            docker run -v $PWD/surefire-reports:/surefire-reports -e URL=http://navajo:8181 --network project_default dexels/navajo.example.test:latest
       - store_test_results:
           # Upload test results for display in Test Summary: https://circleci.com/docs/2.0/collect-test-data/
           path: surefire-reports
@@ -39,11 +52,15 @@ workflows:
   workflow:
     jobs:
       - build:
+          context:
+          - dexels_docker_hub
           filters:
             branches:
               only:
                 - master
       - test:
+          context:
+          - dexels_docker_hub
           requires:
             - build
 

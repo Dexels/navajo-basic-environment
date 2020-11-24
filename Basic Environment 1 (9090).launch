@@ -79,7 +79,6 @@
         <setEntry value="com.dexels.resourcebundle@default:default"/>
         <setEntry value="com.dexels.server.mgmt.api@default:default"/>
         <setEntry value="com.dexels.server.mgmt.impl@default:default"/>
-        <setEntry value="com.diffplug.osgi.extension.sun.misc@default:false"/>
         <setEntry value="com.fasterxml.aalto-xml@default:default"/>
         <setEntry value="com.fasterxml.jackson.core.jackson-annotations@default:default"/>
         <setEntry value="com.fasterxml.jackson.core.jackson-core@default:default"/>
@@ -134,6 +133,7 @@
         <setEntry value="org.apache.felix.scr*2.1.24@1:true"/>
         <setEntry value="org.apache.felix.webconsole.plugins.ds@3:default"/>
         <setEntry value="org.apache.felix.webconsole.plugins.event@3:default"/>
+        <setEntry value="org.apache.felix.webconsole.plugins.obr@3:default"/>
         <setEntry value="org.apache.felix.webconsole@3:default"/>
         <setEntry value="org.apache.httpcomponents.httpclient@default:default"/>
         <setEntry value="org.apache.httpcomponents.httpcore@default:default"/>
@@ -191,6 +191,7 @@
         <setEntry value="org.scala-lang.scala-compiler@default:default"/>
         <setEntry value="org.scala-lang.scala-library@default:default"/>
         <setEntry value="org.scala-lang.scala-reflect@default:default"/>
+        <setEntry value="osgi.extension.sun.misc@default:false"/>
         <setEntry value="stax2-api@default:default"/>
     </setAttribute>
     <setAttribute key="selected_workspace_bundles">
