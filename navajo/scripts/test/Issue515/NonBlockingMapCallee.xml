@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Callee function for the NonBlockingMap example, returning the none message. -->
+
+<navascript>
+
+    <map.testadapter />
+
+    <message name="info">
+        <property name="text" type="string" direction="out">
+            <expression value="[/info/text]"/>
+        </property>
+    </message>
+
+</navascript>

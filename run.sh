@@ -44,7 +44,7 @@ parse_options () {
     done
         
     if [ -n "$with_kafka" ] ; then
-        services="$services kafka"
+        services="$services zookeeper kafka0 kafka1 kafka2"
     fi
     
     if [ -n "$with_navajo" ] ; then
@@ -81,3 +81,4 @@ else
     echo "services: $services"
     docker-compose  up  $build_option  $services
 fi
+

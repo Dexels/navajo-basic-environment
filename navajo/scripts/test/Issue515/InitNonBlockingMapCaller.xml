@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Init script to create a default NonBlockingMapCaller input message. -->
+
+<navascript>
+
+    <message name="NonBlockingMapIn">
+        <property name="Value_1" type="integer" value="42" direction="in" />
+        <property name="Value_2" type="integer" value="43" direction="in" />
+    </message>
+
+    <methods>
+        <method name="test/Issue515/NonBlockingMapCaller" />
+    </methods>
+
+</navascript>

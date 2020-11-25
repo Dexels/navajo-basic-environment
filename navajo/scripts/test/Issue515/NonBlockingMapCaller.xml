@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Navascript test caller script for the NonBlockingMap. -->
+
+<navascript>
+
+    <message name="NonBlockingMapOut">    
+        <map.nonblocking>
+            <nonblocking.createproperty name="'/info/text'" type="'string'" value="'basic'" />
+            <nonblocking.callwebservice name="'test/Issue515/NonBlockingMapCallee'" />
+        </map.nonblocking>
+
+        <map.nonblocking sendThrough="false">
+            <nonblocking.createproperty name="'/info/text'" type="'string'" value="'sendThroughIsFalse'" />
+            <nonblocking.callwebservice name="'test/Issue515/NonBlockingMapCallee'" />
+        </map.nonblocking>
+
+        <map.nonblocking sendThrough="true">
+            <nonblocking.createproperty name="'/info/text'" type="'string'" value="'sendThroughIsTrue'" />
+            <nonblocking.callwebservice name="'test/Issue515/NonBlockingMapCallee'" />
+        </map.nonblocking>
+
+        <map.nonblocking useCurrentOutDoc="false">
+            <nonblocking.createproperty name="'/info/text'" type="'string'" value="'useCurrentOutDocIsFalse'" />
+            <nonblocking.callwebservice name="'test/Issue515/NonBlockingMapCallee'" />
+        </map.nonblocking>
+
+        <map.nonblocking useCurrentOutDoc="true">
+            <nonblocking.createproperty name="'/info/text'" type="'string'" value="'useCurrentOutDocIsTrue'" />
+            <nonblocking.callwebservice name="'test/Issue515/NonBlockingMapCallee'" />
+        </map.nonblocking>
+
+        <map.nonblocking resource="'myself'">
+            <nonblocking.createproperty name="'/info/text'" type="'string'" value="'resourceIsMyself'" />
+            <nonblocking.callwebservice name="'test/Issue515/NonBlockingMapCallee'" />
+        </map.nonblocking>
+
+        <map.nonblocking server="'http://localhost:9090/navajo'">
+            <nonblocking.createproperty name="'/info/text'" type="'string'" value="'serverIsLocalhost'" />
+            <nonblocking.callwebservice name="'test/Issue515/NonBlockingMapCallee'" />
+        </map.nonblocking>
+
+        <property name="response" type="string" value="OK" direction="out" />
+    </message>
+
+    <methods>
+        <method name="test/Issue515/InitNonBlockingMapCaller"/>
+    </methods>
+
+</navascript>

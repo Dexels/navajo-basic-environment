@@ -29,7 +29,7 @@
     <mapAttribute key="org.eclipse.debug.core.environmentVariables">
         <mapEntry key="CLUSTER" value="development_${env_var:USER}${env_var:USERNAME}"/>
         <mapEntry key="DEBUG_SCRIPTS" value="true"/>
-        <mapEntry key="DEVELOP_MODE" value="false"/>
+        <mapEntry key="DEVELOP_MODE" value="true"/>
         <mapEntry key="FILE_REPOSITORY_DEPLOYMENT" value="develop"/>
         <mapEntry key="FILE_REPOSITORY_FILEINSTALL" value="config"/>
         <mapEntry key="FILE_REPOSITORY_MONITORED" value="scripts,config,resources"/>
@@ -133,6 +133,7 @@
         <setEntry value="org.apache.felix.scr*2.1.24@1:true"/>
         <setEntry value="org.apache.felix.webconsole.plugins.ds@3:default"/>
         <setEntry value="org.apache.felix.webconsole.plugins.event@3:default"/>
+        <setEntry value="org.apache.felix.webconsole.plugins.memoryusage@3:default"/>
         <setEntry value="org.apache.felix.webconsole.plugins.obr@3:default"/>
         <setEntry value="org.apache.felix.webconsole@3:default"/>
         <setEntry value="org.apache.httpcomponents.httpclient@default:default"/>
@@ -222,6 +223,7 @@
         <setEntry value="com.dexels.navajo.enterprise.hazelcast@default:default"/>
         <setEntry value="com.dexels.navajo.enterprise.listeners@default:default"/>
         <setEntry value="com.dexels.navajo.enterprise.monitor@default:default"/>
+        <setEntry value="com.dexels.navajo.enterprise.nonblockingmap@default:default"/>
         <setEntry value="com.dexels.navajo.enterprise.oauth.mongodb@default:default"/>
         <setEntry value="com.dexels.navajo.enterprise.pubsub@default:default"/>
         <setEntry value="com.dexels.navajo.enterprise.soap@default:default"/>
