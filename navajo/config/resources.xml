@@ -55,6 +55,12 @@
                     <property name="replicationFactor" value="2"/>
                     <property name="hosts" value="kafka:9092"/>
                 </message>
+                <message name="localhost">
+                    <property name="type" value="navajo"/>
+                    <property name="server" value="http://localhost:9090/navajo"/>
+                    <property name="username" value="admin"/>
+                    <property name="password" value="admin"/>
+                </message>
             </message>
         </message>
     </message>
