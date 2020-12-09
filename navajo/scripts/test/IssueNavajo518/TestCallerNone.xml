@@ -6,12 +6,12 @@
 
     <message name="NoParameter">
         <map.navajomap>
-            <map.callwebservice name="'test/Issue518/TestCallee'" append="'/'" />
+            <map.callwebservice name="'test/IssueNavajo518/TestCallee'" append="'/'" />
         </map.navajomap>
     </message>
 
     <methods>
-        <method name="test/Issue518/InitTest" />
+        <method name="test/IssueNavajo518/InitTest" />
     </methods>
 
 </navascript>

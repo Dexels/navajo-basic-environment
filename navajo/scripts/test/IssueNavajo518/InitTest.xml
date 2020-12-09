@@ -20,9 +20,9 @@
     </message>
 
     <methods>
-        <method name="test/Issue518/TestCallerNone" />
-        <method name="test/Issue518/TestCallerFalse" />
-        <method name="test/Issue518/TestCallerTrue" />
+        <method name="test/IssueNavajo518/TestCallerNone" />
+        <method name="test/IssueNavajo518/TestCallerFalse" />
+        <method name="test/IssueNavajo518/TestCallerTrue" />
     </methods>
 
 </navascript>
