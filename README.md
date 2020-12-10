@@ -13,48 +13,25 @@ The Navajo container has a few scripts that access the data in the databases.
 Clone this repository:
 
 ```
-%> git clone https://github.com/Dexels/navajo.example.git
+%> git clone https://github.com/Dexels/navajo-basic-environment.git
 ```
 
 This will clone a simple navajo project along with some docker configuration files.
 We use docker-compose here, a simple piece of configuration that allows us to start multiple containers at once:
 
-Take a look at the docker compose file:
+The docker compose file defines four containers, called "mongodemo", "postgres", "kafka", and "navajo". The mongodemo container
+exposes the standard mongodb port at 27017, the postgres container the standard postgres port at 5432, the kafka container the
+standard kafka and zookeeper ports at 2181 and 9092, and the navajo container exposes an HTTP port at 8181.
 
 ```
-version: '3'
-services:
-  mongodemo:
-    image: mongo:latest
-    ports:
-      - "27017:27017"
-
-  postgres:
-    image: dexels/dvdrental:1.0.7
-    ports:
-      - "5432:5432"
-    environment:
-      POSTGRES_PASSWORD: mysecretpassword
-
-  navajo:
-    image: dexels/navajo-demo:1
-    ports:
-      - "8181:8181"
-    environment:
-     - CLUSTER=demo
-     - HAZELCAST_SIMPLE=true
-     - FILE_REPOSITORY_DEPLOYMENT=develop
+%> run.sh
 ```
-
-It defines three containers, called "mongodemo", "postgres", and "navajo". The mongodemo container exposes the standard
-mongodb port at 27017, the postgres container the standard postgres port at 5432, and navajo container exposes an HTTP
-port at 8181.
-
+or
 ```
 %> docker-compose up
 ```
 
-Will start all three containers, and after a while they should all be up.
+Will start all four containers, and after a while they should all be up.
 
 then open a browse to:
 http://localhost:8181/tester.html
