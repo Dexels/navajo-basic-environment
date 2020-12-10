@@ -3,7 +3,8 @@
 This setup will start three containers:
 - An empty mongodb instance
 - A postgres database with some fake movie data
-- A navajo container pointing to the two databases
+- A kafka broker
+- A navajo container pointing to the two databases and the broker
 
 The Navajo container has a few scripts that access the data in the databases.
 
