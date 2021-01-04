@@ -1,4 +1,4 @@
-## Small demo-setup for a container-based Navajo instance ##
+## Integration Test environment for Navajo Enterprise ##
 
 This setup will start three containers:
 - An empty mongodb instance
@@ -8,7 +8,7 @@ This setup will start three containers:
 
 The Navajo container has a few scripts that access the data in the databases.
 
-### Using this demo ###
+### Using this test environment ###
 
 Clone this repository:
 
@@ -33,7 +33,14 @@ or
 
 Will start all four containers, and after a while they should all be up.
 
-then open a browse to:
+Then run the tests:
+```
+%> test.sh
+```
+
+## Introspection:
+
+Open a browser window to:
 http://localhost:8181/tester.html
 username: admin password: admin
 

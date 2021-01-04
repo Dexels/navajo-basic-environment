@@ -70,7 +70,7 @@ if [ -n "$with_navajo" ] ; then
         exit 2
     fi
 
-    build=$(curl -s "https://circleci.com/api/v1.1/project/github/Dexels/navajo-container?circle-token=${CIRCLE_TOKEN}&limit=1&offset=0&filter=successful" | jq '.[0].build_num')
+    build=$(curl -s "https://circleci.com/api/v1.1/project/github/Dexels/navajo-container?circle-token=${CIRCLE_TOKEN}&limit=100&offset=0&filter=successful" | jq "[.[]| select(.workflows.job_name == \"build\" and .branch == \"${CIRCLE_BRANCH}\")][0].build_num")
     export VERSION="$prefix.$build"
     echo "Navajo container version: '${VERSION}'"
 fi
