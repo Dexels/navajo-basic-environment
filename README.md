@@ -13,7 +13,7 @@ The Navajo container has a few scripts that access the data in the databases.
 Clone this repository:
 
 ```
-%> git clone https://github.com/Dexels/navajo-basic-environment.git
+%> git clone https://github.com/Dexels/enterprise-integration-test-env.git
 ```
 
 This will clone a simple navajo project along with some docker configuration files.

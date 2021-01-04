@@ -33,7 +33,7 @@
         <mapEntry key="FILE_REPOSITORY_DEPLOYMENT" value="develop"/>
         <mapEntry key="FILE_REPOSITORY_FILEINSTALL" value="config"/>
         <mapEntry key="FILE_REPOSITORY_MONITORED" value="scripts,config,resources"/>
-        <mapEntry key="FILE_REPOSITORY_PATH" value="${project_loc:navajo-basic-environment}/navajo"/>
+        <mapEntry key="FILE_REPOSITORY_PATH" value="${project_loc:enterprise-integration-test-env}/navajo"/>
         <mapEntry key="FILE_REPOSITORY_TYPE" value="multitenant"/>
         <mapEntry key="HAZELCAST_SIMPLE" value="true"/>
         <mapEntry key="INSTANCENAME" value="instance-1"/>
@@ -54,7 +54,7 @@
     <stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="-os ${target.os}&#10;-ws ${target.ws}&#10;-arch ${target.arch}&#10;-nl en_US&#10;-console"/>
     <stringAttribute key="org.eclipse.jdt.launching.SOURCE_PATH_PROVIDER" value="org.eclipse.pde.ui.workbenchClasspathProvider"/>
     <stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="--add-opens java.base/sun.nio.ch=ALL-UNNAMED&#10;-Dcom.sun.management.jmxremote&#10;-Declipse.ignoreApp=true&#10;-Djava.awt.headless=true&#10;-Dnavajo.inject.mbeanserver&#10;-Dorg.ops4j.pax.logging.DefaultServiceLog.level=WARN&#10;-Dorg.osgi.framework.startlevel.beginning=1&#10;-Dorg.osgi.framework.system.packages.extra=sun.misc&#10;-Dorg.osgi.service.http.port=9090&#10;-Dosgi.noShutdown=true&#10;-Dfile.encoding=UTF-8&#10;-Xmx800M"/>
-    <stringAttribute key="org.eclipse.jdt.launching.WORKING_DIRECTORY" value="${workspace_loc:navajo-basic-environment/navajo}"/>
+    <stringAttribute key="org.eclipse.jdt.launching.WORKING_DIRECTORY" value="${workspace_loc:enterprise-integration-test-env/navajo}"/>
     <stringAttribute key="pde.version" value="3.3"/>
     <setAttribute key="selected_target_bundles">
         <setEntry value="bcpg@default:default"/>

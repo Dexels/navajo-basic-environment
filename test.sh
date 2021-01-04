@@ -5,7 +5,7 @@
 #
 
 VOLUME="$PWD/surefire-reports:/surefire-reports"
-NETWORK="navajo-basic-environment_default"
+NETWORK="enterprise-integration-test-env_default"
 IMAGE="dexels/navajo.example.test:latest"
 
 docker  run  -v $VOLUME  --network $NETWORK  $IMAGE
