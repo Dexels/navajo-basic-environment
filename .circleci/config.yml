@@ -28,13 +28,13 @@ jobs:
             date
             mkdir surefire-reports
             docker run -v $PWD/surefire-reports:/surefire-reports -e URL=http://navajo:8181 --network project_default dexels/navajo.example.test:latest
-            mkdir -p surefire-reports/junit/
-            find . -type f -regex ".*/surefire-reports/.*xml" -exec cp {} surefire-reports/junit/ \;
+            mkdir -p test-results/junit/
+            find . -type f -regex ".*/surefire-reports/.*xml" -exec cp {} test-results/junit/ \;
       - store_test_results:
           # Upload test results for display in Test Summary: https://circleci.com/docs/2.0/collect-test-data/
-          path: surefire-reports
+          path: test-results
       - store_artifacts:
-          path: surefire-reports/junit
+          path: test-results/junit
 
 workflows:
   version: 2
