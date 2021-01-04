@@ -2,17 +2,10 @@ version: 2.1
 jobs:
 
   test:
-    docker:
-      - image: cimg/base:stable
-        auth:
-          username: $DOCKERHUB_USER
-          password: $DOCKERHUB_PASS
+    machine:
+      image: circleci/classic:edge
     steps:
       - checkout
-
-      # See https://circleci.com/docs/2.0/building-docker-images/
-      - setup_remote_docker:
-          version: 19.03.13
 
       - run:
           name: Log in with docker registries
@@ -33,11 +26,11 @@ jobs:
             sleep 60
             echo "Sleep completed at:"
             date
-            mkdir /tmp/surefire-reports
-            docker run -v /tmp/surefire-reports:/surefire-reports -e URL=http://navajo:8181 --network project_default dexels/navajo.example.test:latest
+            mkdir surefire-reports
+            docker run -v $PWD/surefire-reports:/surefire-reports -e URL=http://navajo:8181 --network project_default dexels/navajo.example.test:latest
       - store_test_results:
           # Upload test results for display in Test Summary: https://circleci.com/docs/2.0/collect-test-data/
-          path: /tmp/surefire-reports
+          path: surefire-reports
 
 workflows:
   version: 2
