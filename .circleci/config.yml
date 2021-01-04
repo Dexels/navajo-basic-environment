@@ -15,9 +15,13 @@ jobs:
       - run:
           name: Run build.sh
           command: |
-            pwd
-            ls -l
-            ./build.sh
+            SUFFIX=`[[ "${CIRCLE_BRANCH}" = "master" ]] && echo "" || echo "-${CIRCLE_BRANCH}"`
+            export BASE_VERSION=$(curl -s "https://circleci.com/api/v1.1/project/github/Dexels/navajo-container?circle-token=${CIRCLE_TOKEN}&limit=100&offset=0&filter=successful" | jq "[.[]| select(.workflows.job_name == \"build\" and .branch == \"${CIRCLE_BRANCH}\")][0].build_num")
+            export MINORVERSION=3.3
+            export VERSION=${MINORVERSION}.${BASE_VERSION}${SUFFIX}
+            echo "Version: '${VERSION}'"
+            docker-compose  pull
+            docker-compose  build
 
   test:
     machine:
@@ -32,9 +36,10 @@ jobs:
       - run:
           name: Build Docker Compose environment & run tests
           command: |
-            export BASE_VERSION=$(curl -s "https://circleci.com/api/v1.1/project/github/Dexels/navajo-container?circle-token=${CIRCLE_TOKEN}&limit=100&offset=0&filter=successful" | jq '[.[]| select(.workflows.job_name == "build")][0].build_num')
+            SUFFIX=`[[ "${CIRCLE_BRANCH}" = "master" ]] && echo "" || echo "-${CIRCLE_BRANCH}"`
+            export BASE_VERSION=$(curl -s "https://circleci.com/api/v1.1/project/github/Dexels/navajo-container?circle-token=${CIRCLE_TOKEN}&limit=100&offset=0&filter=successful" | jq "[.[]| select(.workflows.job_name == \"build\" and .branch == \"${CIRCLE_BRANCH}\")][0].build_num")
             export MINORVERSION=3.3
-            export VERSION=${MINORVERSION}.${BASE_VERSION}
+            export VERSION=${MINORVERSION}.${BASE_VERSION}${SUFFIX}
             docker-compose up -d
             echo "Compose completed"
             date
