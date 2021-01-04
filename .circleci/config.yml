@@ -1,38 +1,25 @@
 version: 2.1
 jobs:
-  build:
-    machine:
-      image: circleci/classic:edge
-    steps:
-      - checkout
-
-      - run:
-          name: Log in with docker registries
-          command: |
-            docker --version
-            echo $DOCKERHUB_PASS | docker login --username $DOCKERHUB_USER --password-stdin
-
-      - run:
-          name: Run build.sh
-          command: |
-            SUFFIX=`[[ "${CIRCLE_BRANCH}" = "master" ]] && echo "" || echo "-${CIRCLE_BRANCH}"`
-            export BASE_VERSION=$(curl -s "https://circleci.com/api/v1.1/project/github/Dexels/navajo-container?circle-token=${CIRCLE_TOKEN}&limit=100&offset=0&filter=successful" | jq "[.[]| select(.workflows.job_name == \"build\" and .branch == \"${CIRCLE_BRANCH}\")][0].build_num")
-            export MINORVERSION=3.3
-            export VERSION=${MINORVERSION}.${BASE_VERSION}${SUFFIX}
-            echo "Version: '${VERSION}'"
-            docker-compose  pull
-            docker-compose  build
 
   test:
-    machine:
-      image: circleci/classic:edge
+    docker:
+      - image: cimg/base:stable
+        auth:
+          username: $DOCKERHUB_USER
+          password: $DOCKERHUB_PASS
     steps:
       - checkout
+
+      # See https://circleci.com/docs/2.0/building-docker-images/
+      - setup_remote_docker:
+          version: 19.03.13
+
       - run:
           name: Log in with docker registries
           command: |
             docker --version
             echo $DOCKERHUB_PASS | docker login --username $DOCKERHUB_USER --password-stdin
+
       - run:
           name: Build Docker Compose environment & run tests
           command: |
@@ -56,16 +43,7 @@ workflows:
   version: 2
   workflow:
     jobs:
-      - build:
-          context:
-          - dexels_docker_hub
-          filters:
-            branches:
-              only:
-                - master
       - test:
           context:
           - dexels_docker_hub
-          requires:
-            - build
 
