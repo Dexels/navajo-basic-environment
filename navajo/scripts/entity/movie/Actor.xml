@@ -11,6 +11,7 @@
 		<property name="Id" type="string" key="true,id=search" description="Internal actor identifier" />
 		<property name="FirstName" type="string" description="First name" />
 		<property name="LastName" type="string" description="Last name" />
+        <property name="DeleteCount" type="integer" description="Number of rows deleted" />
 	</message>
 
 </navascript>

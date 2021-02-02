@@ -11,6 +11,7 @@
 		<property name="Id" type="integer" key="true,id=search" description="Internal film identifier" />
         <property name="Title" type="string" description="Full title" />
         <property name="ReleaseYear" type="integer" description="Year of first release" />
+        <property name="DeleteCount" type="integer" description="Number of rows deleted" />
 	</message>
 
 </navascript>
