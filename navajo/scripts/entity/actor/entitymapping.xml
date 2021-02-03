@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tml>
+    <message name="entities" type="array">
+        <message name="entities" type="array_element">
+            <property name="entity" value="actor/Actor" />
+        </message>
+        <message name="entities" type="array_element">
+            <property name="entity" value="actor/ActorList" />
+        </message>
+    </message>
+</tml>

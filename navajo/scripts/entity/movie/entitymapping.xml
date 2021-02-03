@@ -2,16 +2,16 @@
 <tml>
     <message name="entities" type="array">
         <message name="entities" type="array_element">
-            <property name="entity" value="movie/Actor" />
+            <property name="entity" value="actor/Actor" />
         </message>
         <message name="entities" type="array_element">
-            <property name="entity" value="movie/ActorList" />
+            <property name="entity" value="actor/ActorList" />
         </message>
         <message name="entities" type="array_element">
-            <property name="entity" value="movie/Film" />
+            <property name="entity" value="film/Film" />
         </message>
         <message name="entities" type="array_element">
-            <property name="entity" value="movie/FilmList" />
+            <property name="entity" value="film/FilmList" />
         </message>
     </message>
 </tml>
