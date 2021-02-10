@@ -62,6 +62,10 @@ services="postgres mongodemo"
 parse_options "$@"
 
 
+if [ -z "$CIRCLE_BRANCH" ] ; then
+    CIRCLE_BRANCH="master"
+fi
+
 export VERSION=""
 if [ -n "$with_navajo" ] ; then
     prefix=3.3
