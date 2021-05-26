@@ -131,7 +131,7 @@
         <setEntry value="org.apache.felix.gogo.shell@1:default"/>
         <setEntry value="org.apache.felix.inventory@1:default"/>
         <setEntry value="org.apache.felix.metatype@1:default"/>
-        <setEntry value="org.apache.felix.scr*2.1.24@1:true"/>
+        <setEntry value="org.apache.felix.scr*2.1.26@1:true"/>
         <setEntry value="org.apache.felix.webconsole.plugins.ds@3:default"/>
         <setEntry value="org.apache.felix.webconsole.plugins.event@3:default"/>
         <setEntry value="org.apache.felix.webconsole.plugins.memoryusage@3:default"/>
