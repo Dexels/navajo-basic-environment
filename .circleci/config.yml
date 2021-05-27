@@ -4,6 +4,7 @@ jobs:
   test:
     machine:
       image: circleci/classic:edge
+
     steps:
       - checkout
 
@@ -16,31 +17,39 @@ jobs:
       - run:
           name: Build Docker Compose environment & run tests
           command: |
-            SUFFIX=`[[ "${CIRCLE_BRANCH}" = "master" ]] && echo "" || echo "-${CIRCLE_BRANCH}"`
-            export BASE_VERSION=$(curl -s "https://circleci.com/api/v1.1/project/github/Dexels/navajo-container?circle-token=${CIRCLE_TOKEN}&limit=100&offset=0&filter=successful" | jq "[.[]| select(.workflows.job_name == \"build\" and .branch == \"${CIRCLE_BRANCH}\")][0].build_num")
-            export MINORVERSION=3.3
-            export VERSION=${MINORVERSION}.${BASE_VERSION}${SUFFIX}
+            SUFFIX=$([[ $CIRCLE_BRANCH = "master" ]] && echo "" || echo "-$CIRCLE_BRANCH")
+            BUILD=$(curl -s "https://circleci.com/api/v1.1/project/github/Dexels/navajo-container?circle-token=${CIRCLE_TOKEN}&limit=100&offset=0&filter=successful" | jq "[.[]| select(.workflows.job_name == \"build\" and .branch == \"${CIRCLE_BRANCH}\")][0].build_num")
+            PREFIX="3.3"
+            export VERSION="${PREFIX}.${BUILD}${SUFFIX}"
+
             docker-compose up -d
             echo "Compose completed"
             date
             sleep 60
             echo "Sleep completed at:"
             date
+
             mkdir surefire-reports
-            docker run -v $PWD/surefire-reports:/surefire-reports -e URL=http://navajo:8181 --network project_default dexels/enterprise-integration-test-script:latest
+            docker run -v $PWD/surefire-reports:/surefire-reports -e URL=http://navajo:8181 --network project_default "dexels/enterprise-integration-test-script:latest${SUFFIX}"
             mkdir -p test-results/junit/
             find . -type f -regex ".*/surefire-reports/.*xml" -exec cp {} test-results/junit/ \;
+
       - store_test_results:
-          # Upload test results for display in Test Summary: https://circleci.com/docs/2.0/collect-test-data/
           path: test-results
+
       - store_artifacts:
           path: test-results/junit
 
 workflows:
   version: 2
-  workflow:
+  build:
     jobs:
       - test:
           context:
-          - dexels_docker_hub
+            - dexels_docker_hub
+          filters:
+            branches:
+              only:
+                - master
+                - test
 
