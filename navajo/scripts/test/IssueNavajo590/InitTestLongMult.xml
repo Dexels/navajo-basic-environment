@@ -2,23 +2,19 @@
 <navascript>
 
     <message name="MultiplicationResult">
-        <property name="longxlong" direction="out">
+        <property name="long_long" direction="out">
             <expression value="ToLong(3) * ToLong(1)" />
         </property>
-
-        <property name="longxint" direction="out">
+        <property name="long_int" direction="out">
             <expression value="ToLong(3) * 1" />
         </property>
-
-        <property name="intxlong" direction="out">
+        <property name="int_long" direction="out">
             <expression value="3 * ToLong(1)" />
         </property>
-
-        <property name="longxdouble" direction="out">
+        <property name="long_double" direction="out">
             <expression value="ToLong(3) * 1.0" />
         </property>
-
-        <property name="doublexlong" direction="out">
+        <property name="double_long" direction="out">
             <expression value="3.0 * ToLong(1)" />
         </property>
     </message>

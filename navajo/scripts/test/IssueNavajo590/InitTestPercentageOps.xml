@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<navascript>
+
+    <message name="PercentageOpsResult">
+        <message name="Addition">
+            <property name="percentage_percentage" direction="out">
+                <expression value="ToPercentage(10) + ToPercentage(5)" />
+            </property>
+            <property name="percentage_int" direction="out">
+                <expression value="ToPercentage(10) + 5" />
+            </property>
+            <property name="int_percentage" direction="out">
+                <expression value="10 + ToPercentage(5)" />
+            </property>
+            <property name="percentage_long" direction="out">
+                <expression value="ToPercentage(10) + ToLong(5)" />
+            </property>
+            <property name="long_percentage" direction="out">
+                <expression value="ToLong(10) + ToPercentage(5)" />
+            </property>
+            <property name="percentage_double" direction="out">
+                <expression value="ToPercentage(10) + 5.0" />
+            </property>
+            <property name="double_percentage" direction="out">
+                <expression value="10.0 + ToPercentage(5)" />
+            </property>
+        </message>
+        
+        <message name="Subtraction">
+            <property name="percentage_percentage" direction="out">
+                <expression value="ToPercentage(10) - ToPercentage(5)" />
+            </property>
+            <property name="percentage_int" direction="out">
+                <expression value="ToPercentage(10) - 5" />
+            </property>
+            <property name="int_percentage" direction="out">
+                <expression value="10 - ToPercentage(5)" />
+            </property>
+            <property name="percentage_long" direction="out">
+                <expression value="ToPercentage(10) - ToLong(5)" />
+            </property>
+            <property name="long_percentage" direction="out">
+                <expression value="ToLong(10) - ToPercentage(5)" />
+            </property>
+            <property name="percentage_double" direction="out">
+                <expression value="ToPercentage(10) - 5.0" />
+            </property>
+            <property name="double_percentage" direction="out">
+                <expression value="10.0 - ToPercentage(5)" />
+            </property>
+        </message>
+    </message>
+
+</navascript>
