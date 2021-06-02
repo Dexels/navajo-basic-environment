@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<navascript>
+
+    <message name="MoneyOpsResult">
+        <message name="Addition">
+            <property name="money_money" direction="out">
+                <expression value="ToMoney(10) + ToMoney(5)" />
+            </property>
+            <property name="money_int" direction="out">
+                <expression value="ToMoney(10) + 5" />
+            </property>
+            <property name="int_money" direction="out">
+                <expression value="10 + ToMoney(5)" />
+            </property>
+            <property name="money_long" direction="out">
+                <expression value="ToMoney(10) + ToLong(5)" />
+            </property>
+            <property name="long_money" direction="out">
+                <expression value="ToLong(10) + ToMoney(5)" />
+            </property>
+            <property name="money_double" direction="out">
+                <expression value="ToMoney(10) + 5.0" />
+            </property>
+            <property name="double_money" direction="out">
+                <expression value="10.0 + ToMoney(5)" />
+            </property>
+        </message>
+        
+        <message name="Subtraction">
+            <property name="money_money" direction="out">
+                <expression value="ToMoney(10) - ToMoney(5)" />
+            </property>
+            <property name="money_int" direction="out">
+                <expression value="ToMoney(10) - 5" />
+            </property>
+            <property name="int_money" direction="out">
+                <expression value="10 - ToMoney(5)" />
+            </property>
+            <property name="money_long" direction="out">
+                <expression value="ToMoney(10) - ToLong(5)" />
+            </property>
+            <property name="long_money" direction="out">
+                <expression value="ToLong(10) - ToMoney(5)" />
+            </property>
+            <property name="money_double" direction="out">
+                <expression value="ToMoney(10) - 5.0" />
+            </property>
+            <property name="double_money" direction="out">
+                <expression value="10.0 - ToMoney(5)" />
+            </property>
+        </message>
+    </message>
+
+</navascript>
