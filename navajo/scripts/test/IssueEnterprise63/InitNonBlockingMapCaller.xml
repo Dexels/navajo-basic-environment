@@ -10,7 +10,7 @@
     </message>
 
     <methods>
-        <method name="test/Issue515/NonBlockingMapCaller" />
+        <method name="test/IssueEnterprise63/NonBlockingMapCaller" />
     </methods>
 
 </navascript>
