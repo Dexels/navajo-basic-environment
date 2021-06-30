@@ -26,7 +26,7 @@
             </message>    
         </map.navajomap>
     
-        <map.navajomap resource="'myself'">
+        <map.navajomap resource="'localhost'">
             <map.createproperty name="'/Request/ValueIn'" value="ToInteger([/IndirectRequest/IndirectValueIn]) + 5"/>
             <map.callwebservice name="'NavajoMap/NavajoMapCallee'"/>
             <message name="IndirectResponse">
