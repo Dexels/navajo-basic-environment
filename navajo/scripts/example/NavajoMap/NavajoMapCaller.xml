@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Simple caller function for the NavajoMap example. Calls the callee three times. -->
+
+<navascript>
+
+    <param name="Input">
+        <expression value="ToInteger([/IndirectRequest/IndirectValueIn])" />
+    </param>
+
+    <message name="IndirectResponse" type="array">
+
+        <map.navajomap>
+            <map.createproperty name="'/Request/ValueIn'" value="[/@Input] + 1"/>
+            <map.callwebservice name="'example/NavajoMap/NavajoMapCallee'"/>
+            <message name="IndirectResponse">
+                <property name="IndirectValueOut" type="integer" direction="out">
+                    <expression value="$property('/Response/ValueOut') + 1"/>
+                </property>
+            </message>
+        </map.navajomap>
+    
+        <map.navajomap resource="'localhost'">
+            <map.createproperty name="'/Request/ValueIn'" value="[/@Input] + 2"/>
+            <map.callwebservice name="'example/NavajoMap/NavajoMapCallee'"/>
+            <message name="IndirectResponse">
+                <property name="IndirectValueOut" type="integer" direction="out">
+                    <expression value="$property('/Response/ValueOut') + 2"/>
+                </property>
+            </message>    
+        </map.navajomap>
+    
+        <map.navajomap server="'http://localhost:9090/navajo'">
+            <map.createproperty name="'/Request/ValueIn'" value="[/@Input] + 3"/>
+            <map.callwebservice name="'example/NavajoMap/NavajoMapCallee'"/>
+            <message name="IndirectResponse">
+                <property name="IndirectValueOut" type="integer" direction="out">
+                    <expression value="$property('/Response/ValueOut') + 3"/>
+                </property>
+            </message>    
+        </map.navajomap>
+
+    </message>
+
+    <methods>
+        <method name="example/NavajoMap/InitNavajoMapCaller"/>
+    </methods>
+
+</navascript>

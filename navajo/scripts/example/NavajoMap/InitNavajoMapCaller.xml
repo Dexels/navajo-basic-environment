@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Simple init script to create a default NavajoMapCaller input message. -->
+
+<navascript>
+
+    <message name="IndirectRequest">
+        <property name="IndirectValueIn" type="integer" value="1" direction="in" />
+    </message>
+
+    <methods>
+        <method name="example/NavajoMap/NavajoMapCaller" />
+    </methods>
+
+</navascript>
