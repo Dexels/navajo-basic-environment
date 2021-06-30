@@ -2,14 +2,14 @@
 
 <!-- Simple init script to create a default NavajoMapCallee input message. -->
 
-<tsl>
+<navascript>
 
     <message name="Request">
-        <property name="ValueIn" type="integer" value="42" direction="in" />
+        <property name="ValueIn" type="integer" value="1" direction="in" />
     </message>
 
     <methods>
-        <method name="NavajoMap/NavajoMapCallee"/>
+        <method name="example/NavajoMap/NavajoMapCallee" />
     </methods>
 
-</tsl>
+</navascript>
