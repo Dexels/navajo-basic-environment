@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<navascript>
+
+    <debug value="'AfterInitTest is started'" />
+
+    <message name="Wait">
+        <property name="Wait" direction="out">
+            <expression value="Wait(2000)" />
+        </property>
+    </message>
+
+    <debug value="'AfterInitTest is ended'" />
+
+</navascript>

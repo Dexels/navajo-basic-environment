@@ -1,4 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <tml documentImplementation="SAXP">
-   <message name="tasks" type="array"/>
-   <methods/>
+    <message name="deployments">
+        <message name="develop">
+            <message name="tasks" type="array">
+
+                <message index="0" name="tasks" type="array_element">
+                    <property direction="out" name="id" value="AfterInitTest" type="string" />
+                    <property direction="out" name="username" value="admin" type="string" />
+                    <property direction="out" name="password" value="admin" type="string" />
+                    <property direction="out" name="webservice" value="AfterInitTest" type="string" />
+                    <property direction="out" name="proxy" value="false" type="boolean" />
+                    <property direction="out" name="keeprequestresponse" value="false" type="boolean" />
+                    <property direction="out" name="trigger" value="navajo:InitTest" type="string" />
+                    <property direction="out" name="workflowdef" type="string" />
+                    <property direction="out" name="workflowid" type="string" />
+                    <property direction="out" name="taskdescription" value="" type="string" />
+                    <property direction="out" name="clientid" value="" type="string" />
+                    <property direction="out" name="persisted" value="false" type="boolean" />
+                    <property direction="out" name="forcesync" value="true" type="boolean" />
+                </message>
+
+            </message>
+        </message>
+    </message>
 </tml>
+
+
+
+
+
+
+
